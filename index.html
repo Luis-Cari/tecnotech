@@ -453,6 +453,168 @@ footer p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
   border: 1px solid var(--border); opacity: 0; transition: opacity .2s;
 }
 .wa-float:hover .wa-tooltip { opacity: 1; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE — MOBILE (hasta 768px)
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Topbar ── */
+  .topbar { font-size: 0.75rem; padding: 8px 0.75rem; }
+
+  /* ── Navbar ── */
+  nav {
+    padding: 0 1rem;
+    height: 58px;
+  }
+  .nav-links { display: none; }
+  .logo { font-size: 1.15rem; }
+  .logo sub { display: none; }
+  .nav-cta { padding: 7px 12px; font-size: 0.78rem; }
+
+  /* ── Hero ── */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 2.5rem 1.2rem 2rem;
+    gap: 2rem;
+  }
+  .hero::before { display: none; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 0.92rem; max-width: 100%; margin-bottom: 1.75rem; }
+  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 1.5px; padding: 5px 12px; }
+  .hero-actions { flex-direction: column; gap: 0.75rem; }
+  .btn-green,
+  .btn-outline-green {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 16px;
+    font-size: 0.9rem;
+  }
+  .hero-stats {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  .stat-item strong { font-size: 1.5rem; }
+  .stat-item span { font-size: 0.75rem; }
+
+  /* ── Teléfono decorativo ── */
+  .hero-visual { justify-content: center; }
+  .hero-phone-mockup { width: 180px; }
+  .floating-badge { display: none; }
+
+  /* ── Android only bar ── */
+  .android-only {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.2rem;
+    text-align: center;
+  }
+  .android-note { font-size: 0.78rem; }
+
+  /* ── Trust bar ── */
+  .trust-bar { flex-direction: column; }
+  .trust-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 1.2rem;
+    width: 100%;
+  }
+  .trust-item:last-child { border-bottom: none; }
+
+  /* ── Categorías ── */
+  .categories {
+    padding: 1.75rem 1.2rem 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+  .cat-card { padding: 0.9rem 0.4rem; }
+  .cat-emoji { font-size: 1.4rem; }
+  .cat-name { font-size: 0.74rem; }
+  .cat-count { display: none; }
+
+  /* ── Secciones generales ── */
+  section { padding: 2.5rem 1.2rem; }
+  section[style*="padding: 5rem 3rem"] { padding: 2.5rem 1.2rem !important; }
+  .section-title { font-size: 1.75rem; }
+  .section-subtitle { font-size: 0.88rem; }
+
+  /* ── Servicios ── */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+  .service-card { padding: 1.5rem; }
+
+  /* ── Proceso / Steps ── */
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .steps::before { display: none; }
+  .step { padding: 0; }
+
+  /* ── Marcas ── */
+  .marcas-grid { gap: 0.5rem; margin-top: 1.5rem; }
+  .marca-tag { padding: 7px 12px; font-size: 0.8rem; }
+
+  /* ── Por qué elegirnos ── */
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+  }
+
+  /* ── Contacto ── */
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.75rem;
+  }
+  .contact-card { padding: 1.25rem; }
+
+  /* ── Formulario ── */
+  .form-group input,
+  .form-group select,
+  .form-group textarea { font-size: 1rem; } /* evita zoom en iOS/Android */
+
+  /* ── Promo banner ── */
+  .promo-banner {
+    grid-template-columns: 1fr;
+    margin: 0.75rem 1.2rem 2rem;
+    min-height: auto;
+  }
+  .promo-image { display: none; }
+  .promo-content { padding: 2rem 1.5rem; }
+  .promo-content h2 { font-size: 1.6rem; }
+
+  /* ── FAQ ── */
+  .faq-list { margin-top: 1.75rem; }
+  .faq-question h4 { font-size: 0.88rem; }
+
+  /* ── Footer ── */
+  footer { padding: 2rem 1.2rem; }
+  .footer-links { gap: 0.75rem; }
+  .footer-logo { font-size: 1.3rem; }
+
+  /* ── WhatsApp flotante ── */
+  .wa-float { width: 50px; height: 50px; bottom: 1.2rem; right: 1.2rem; }
+  .wa-tooltip { display: none; }
+}
+
+/* ══════════════════════════════════════
+   PANTALLAS MUY PEQUEÑAS (hasta 380px)
+   ══════════════════════════════════════ */
+@media (max-width: 380px) {
+  .hero h1 { font-size: 1.85rem; }
+  .categories { grid-template-columns: repeat(2, 1fr); }
+  .hero-phone-mockup { width: 150px; }
+  .nav-cta { font-size: 0.72rem; padding: 6px 10px; }
+}
 </style>
 </head>
 <body>
